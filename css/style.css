@@ -1,0 +1,614 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+* { margin: 0; padding: 0; }
+
+/* ---------- show the background image --------- */
+html {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}  
+
+a {
+    text-decoration: none;
+}
+
+.page_title {
+    text-align: center;
+    font-size: 40px;
+    margin: 60px 0 0 75px;
+    color: #313131;
+}
+
+/* ---------- Header ---------- */
+header {
+    position: fixed;
+    width: 150px;
+    height: 100vh;
+    background: #2a2a2a;
+    z-index: 100;
+    opacity: 0.8;
+}
+
+/* ---------- Logo ---------- */
+.logo {
+    float: left;
+    text-align: center;
+    width: 100%;
+    height: 60px;
+    background: #00a1e8;
+    font-size: 24px;
+    color: #fff;
+    line-height: 60px;
+}
+
+/* ---------- Navigation ---------- */
+nav {
+    float: right;
+}
+
+nav ul {
+    float: left;
+    margin: 0 0 0 1%;
+    padding: 0;
+    list-style: none; 
+}
+
+nav ul li {
+    float: left;
+    width: 150px;
+    margin: 0 2px 0 0;
+    padding: 0 2px 0 2px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 60px;
+    color: #fff;
+    overflow: hidden;
+}
+
+nav ul li:hover {
+    background: #00a1e8;
+    transition: all 0.5s;
+}
+
+/* ---------- hamburget meu ---------- */
+.hamburger_menu {
+    display: none;
+}
+.hamburger_nav {
+    display: none;
+    position: absolute;
+    background-color: white;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+}
+
+.hamburger_nav ul {
+    width:90vw;
+    height: auto;
+    margin: auto;
+    margin-top: 140px;
+    list-style: inside;
+    text-align: left;
+}
+
+.hamburger_nav ul li {
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 5px 0 5px 30px;
+    font-size: 24px;
+    color: #313131;
+}
+.hamburger_nav ul li:hover {
+    cursor: pointer;
+    color: #c7c7c7;
+    transition: all 0.1s;
+}
+
+/* ---------- Mobile Nav ---------- */
+.cross_btn {
+    position: fixed;
+    float: left;
+    left: 0px;
+    top: 0px;
+    margin: 5px;
+    padding: 5px;
+    width: 40px;
+    height: 40px;
+}
+
+#cross_h {
+    display: none;
+    cursor: pointer;
+}
+
+.h_title {
+    display: none;
+}
+
+.home_menu {
+    display: none;
+}
+
+/* ---------- Container ---------- */
+.container {
+    float: left;
+    margin: 0;
+    width: 100vw;
+}
+/* ---------- Slider carousel start ---------- */
+.carousel{
+    position:relative;
+}
+
+.carousel-inner{
+    position:relative;
+    width:100%;
+    overflow:hidden
+}
+
+.carousel-inner>.item{
+    position:relative;
+    display:none;
+    -webkit-transition:.6s ease-in-out left;
+    -o-transition:.6s ease-in-out left;
+    transition:.6s ease-in-out left
+}
+
+.carousel-inner>.active,.carousel-inner>.next,.carousel-inner>.prev{
+    display:block;
+}
+
+.carousel-inner>.active{
+    left:0;
+}
+
+.carousel-inner>.next,.carousel-inner>.prev{
+    position:absolute;
+    top:0;
+    width:100%;
+}
+
+.carousel-inner>.next{
+    left:100%;
+}
+
+.carousel-inner>.prev{
+    left:-100%;
+}
+
+.carousel-inner>.next.left,.carousel-inner>.prev.right{
+    left:0;
+}
+
+.carousel-inner>.active.left{
+    left:-100%;
+}
+
+.carousel-inner>.active.right{
+    left:100%;
+}
+
+.carousel-indicators{
+    position:absolute;
+    bottom:10px;
+    left:50%;
+    z-index:15;
+    width:60%;
+    padding-left:0;
+    margin-left:-30%;
+    text-align:center;
+    list-style:none;
+}
+
+.carousel-indicators li{
+    display:inline-block;
+    width:7px;
+    height:7px;
+    margin:1px;
+    text-indent:-999px;
+    cursor:pointer;
+    background-color:#000\9;
+    background-color:rgba(0,0,0,0);
+    border:1px solid #fff;
+    border-radius:10px;
+}
+
+.carousel-indicators .active{
+    width:8px;
+    height:8px;
+    margin:0;
+    background-color:#fff;
+}
+
+.carousel-caption{
+    position:absolute;
+    right:15%;
+    bottom:20px;
+    left:15%;
+    z-index:10;
+    padding-top:20px;
+    padding-bottom:20px;
+    color:#fff;
+    text-align:center;
+    text-shadow:0 1px 2px rgba(0,0,0,.6);
+}
+
+.carousel-caption .btn{
+    text-shadow:none;
+}
+
+
+/* ---------- Slider carousel end ---------- */
+
+
+/* -- block to show pictures --*/
+/* -- the whole block width is .first's and second's widths + span's width; now is 840--*/
+.category {
+    width: 100vw;
+    margin: 50px 0 0 75px;
+    padding: 0;
+    font-family: "verda";
+}
+
+/* -- The PROGRAM page --*/
+.c_projects {
+    width: 100vw;
+    margin: 50px 0 0 75px;
+    padding: 0;
+    font-family: "verda";
+    text-align: center;
+}
+
+/* -- The PROGRAM page, main body --*/
+.category_2 {
+    width: 820px;
+    margin: auto;
+
+}
+
+.category ul {
+    text-align: center;
+    list-style: none;
+    margin: 0 0 40px 0;
+    padding:0;
+    width: 100%;
+}
+
+.category ul a, .category_2 ul a{
+    text-decoration: none;
+}
+
+.category ul span, .category_2 ul span {
+    margin:0 20px 0 20px;
+    padding: 0;
+}
+
+/* -- there're two stuffs in a row, first and second --*/
+.category ul li {
+    width: 360px;
+    height: auto;
+    display: inline-block;
+    text-align: left;
+    margin: 0 35px 40px 35px;
+    overflow: hidden;
+    font-family: arial;
+    font-size: 16px;
+    color: #000;
+    font-weight: 100;
+    letter-spacing: 0.5px;
+}
+
+.category ul li img {
+    float: left;
+    margin: 0px 30px 10px 0;
+    width: 150px;
+    height: 150px;
+}
+
+.category_2 ul {
+    text-align: left;
+    list-style: none;
+    margin: 0 0 40px 0;
+    padding:0;
+    width: 100%;
+}
+
+.category_2 ul li {
+    width: 160px;
+    height: auto;
+    display: inline-block;
+    text-align: left;
+    margin: 0 20px 30px 20px;
+    overflow: hidden;
+    font-family: arial;
+    font-size: 16px;
+    color: #000;
+    font-weight: 100;
+    letter-spacing: 0.5px;
+}
+
+.category_2 ul li img {
+    float: left;
+    margin: 0px 0 10px 0;
+    width: 160px;
+    height: 160px;
+}
+
+/* -- Category End -- */
+
+/* ---------- Contact Form Starts ---------- */
+
+.contact-form-wrapper {
+    position: relative;
+	max-width:700px;
+    width: 100%;
+	margin:0 auto;
+    margin-bottom: 50px;
+}
+#contact-form {
+	text-shadow:0 1px 0 #FFF;
+	border-radius:4px;
+	-webkit-border-radius:4px;
+	-moz-border-radius:4px;
+    margin-left: 75px;
+	padding:25px;
+}
+#contact-form input,
+#contact-form textarea,
+#contact-form button[type="submit"] {
+	font:400 12px/12px "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+#contact-form h3 {
+	color:#313131;
+	display:block;
+	font-size:28px;
+}
+#contact-form h4 {
+	margin:5px 0 15px;
+	display:block;
+	font-size:15px;
+}
+#contact-form label span {
+	cursor:pointer;
+	color:#5d5d5d;
+	display:block;
+	margin:15px 0;
+    font-size: 20px;
+}
+#contact-form input, 
+#contact-form textarea {
+	margin:0 0 5px;
+    width: 100%;
+	border:1px solid #CCC;
+	background:#FFF;
+	margin:0 0 5px;
+	border-radius:5px;
+    border: solid 1px #bfbfbf;
+	padding:10px 0 10px 0;
+    font-size: 14px;
+}
+#contact-form textarea {
+	height:150px;
+}
+
+#contact-form button[type="submit"] {
+	cursor:pointer;
+	width:100%;
+	border:none;
+	background:#00a1e8;
+	color:#FFF;
+	margin:20px 0 5px;
+	padding:10px;
+	border-radius:5px;
+}
+#contact-form button[type="submit"]:hover {
+	background:#14b7ff;
+    transition: all 0.5s;
+}
+
+
+/* ---------- Contact Form End ---------- */
+
+/* ---------- Footer Start ---------- */
+footer {
+    position: relative;
+    width: 100%;
+    float: left;
+	background:#00a1e8;
+	border-bottom:solid 15px #202020;
+}
+
+.footer-topper {
+    position: relative;
+    margin: 0 0 10px 0;
+	width:100%;
+	background:#00a1e8;
+}
+
+.footer-topper .link-menu {
+    text-align: center;
+    list-style: none;
+    width: 100%;
+    margin: 50px 0 50px 0;
+    height: auto;
+}
+
+.home-link {
+    display: inline-block;
+    width: 200px;
+    padding: 0;
+    margin: 0 2% 0 2%;
+}
+
+.home-link-title {
+    position: relative;
+    color:#fff;
+    text-align: left;
+    font-size: 24px;
+    padding-bottom: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.home-link ul {
+    text-align: left;
+    position: relative;
+    margin-top:50px;
+    list-style: none;
+    margin: auto;
+    padding: 0;
+}
+
+.home-link ul li {
+    position: relative;
+    margin: auto;
+    margin-top: 5px;
+    width: 50%;
+    padding: 0;
+    color: #fff;
+    font-size: 15px;
+}
+
+.home-link ul li a {
+    color: #fff;
+}
+
+.home-link ul li a:hover {
+    text-decoration: underline;
+}
+
+.home-link-border {
+    position: absolute;
+    top: 90px;
+    margin-left: -20px;
+    display: inline-block;
+    height: 120px;
+    border: solid 1px #dddddd;
+}
+.footer-topper .social-menu {
+    margin: auto;
+    width: 184px;
+    height: 30px;
+}
+
+.footer-topper .social-menu ul {
+    width: 180px;
+    margin: auto;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.footer-topper .social-menu ul li {
+	float:left;
+}
+.footer-topper .social-menu ul li a {
+	display:block;
+	width:30px;
+	height:30px;
+	background:url(../image/footer-social-sprite.png) no-repeat;
+}
+.footer-topper .social-menu ul li a.fb {
+	background-position:0px 0px;
+}
+.footer-topper .social-menu ul li a.tw {
+	background-position:-30px 0px;
+}
+.footer-topper .social-menu ul li a.oo {
+	background-position:-60px 0px;
+}
+.footer-topper .social-menu ul li a.vm {
+	background-position:-90px 0px;
+}
+.footer-topper .social-menu ul li a.gp {
+	background-position:-120px 0px;
+}
+.footer-topper .social-menu ul li a.cs {
+	background-position:-150px 0px;
+}
+.footer-topper .social-menu ul li a.fb:hover {
+	background-position:0px -30px;
+	-webkit-transition: background-position 0.4s linear;
+	-moz-transition: background-position 0.4s linear;
+	-ms-transition: background-position 0.4s linear;
+	-o-transition: background-position 0.4s linear;
+	transition: background-position 0.4s linear;
+}
+.footer-topper .social-menu ul li a.tw:hover {
+	background-position:-30px -30px;
+	-webkit-transition: background-position 0.4s linear;
+	-moz-transition: background-position 0.4s linear;
+	-ms-transition: background-position 0.4s linear;
+	-o-transition: background-position 0.4s linear;
+	transition: background-position 0.4s linear;
+}
+.footer-topper .social-menu ul li a.oo:hover {
+	background-position:-60px -30px;
+	-webkit-transition: background-position 0.4s linear;
+	-moz-transition: background-position 0.4s linear;
+	-ms-transition: background-position 0.4s linear;
+	-o-transition: background-position 0.4s linear;
+	transition: background-position 0.4s linear;
+}
+.footer-topper .social-menu ul li a.vm:hover {
+	background-position:-90px -30px;
+	-webkit-transition: background-position 0.4s linear;
+	-moz-transition: background-position 0.4s linear;
+	-ms-transition: background-position 0.4s linear;
+	-o-transition: background-position 0.4s linear;
+	transition: background-position 0.4s linear;
+}
+.footer-topper .social-menu ul li a.gp:hover {
+	background-position:-120px -30px;
+	-webkit-transition: background-position 0.4s linear;
+	-moz-transition: background-position 0.4s linear;
+	-ms-transition: background-position 0.4s linear;
+	-o-transition: background-position 0.4s linear;
+	transition: background-position 0.4s linear;
+}
+.footer-topper .social-menu ul li a.cs:hover {
+	background-position:-150px -30px;
+	-webkit-transition: background-position 0.4s linear;
+	-moz-transition: background-position 0.4s linear;
+	-ms-transition: background-position 0.4s linear;
+	-o-transition: background-position 0.4s linear;
+	transition: background-position 0.4s linear;
+}
+
+.footer-bottom {
+    position: relative;
+    float: left;
+    height: 100px;
+    background: #000;
+    width: 100%;
+}
+
+.footer-bottom .copyright {
+    margin: auto;
+    width: 160px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.footer-bottom .copyright p {
+	font-size:16px;
+	color:#989898;
+}
+
+.footer-bottom .copyright p span {
+	font-family: 'TitilliumMaps26L-999wt';
+	color:#ffffff;
+	background:#00a1e8;
+	padding:0 5px;
+	display:inline-block;
+}
